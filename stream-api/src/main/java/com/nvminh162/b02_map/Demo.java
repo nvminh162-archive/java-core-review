@@ -48,9 +48,16 @@ public class Demo {
         System.out.println("\nSalaries:");
         System.out.println(salaries);
 
-        double totalSalary = users.stream()
-                .mapToDouble(User::getSalary)
-                .sum();
+//        double totalSalary = users.stream()
+//                .mapToDouble(User::getSalary)
+//                .sum();
+
+//        double totalSalary = salaries.stream()
+//                        .mapToDouble(Double::doubleValue)
+//                        .sum();
+
+        double totalSalary = salaries.stream()
+                        .reduce(0.0, Double::sum);
 
         System.out.println("\nTotal salary:");
         System.out.println(totalSalary);
