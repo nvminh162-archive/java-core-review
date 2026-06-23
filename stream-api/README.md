@@ -1,5 +1,3 @@
----
-
 # Cấu trúc package
 
 ```text
