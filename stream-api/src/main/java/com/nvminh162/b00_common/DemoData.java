@@ -11,7 +11,8 @@ public class DemoData {
                 new User(3, "Binh", 25, false, "IT", 1500, Arrays.asList("Java", "Docker", "AWS")),
                 new User(4, "Long", 30, true, "Finance", 2000, Arrays.asList("Excel", "Accounting", "SQL")),
                 new User(5, "Hoa", 28, true, "IT", 1800, Arrays.asList("Java", "Spring", "AWS")),
-                new User(6, "Lan", 20, false, "HR", 900, Arrays.asList("Recruitment", "Communication"))
+                new User(6, "Lan", 20, false, "HR", 900, Arrays.asList("Recruitment", "Communication")),
+                new User(7, "Minh", 23, true, "IT", 1200, Arrays.asList("Java", "Docker", "SQL"))
         );
     }
 }

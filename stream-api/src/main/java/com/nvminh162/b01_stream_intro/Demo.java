@@ -18,15 +18,12 @@ public class Demo {
         // =====================================================
 
         List<String> namesOldWay = new ArrayList<>();
-
         for (User user : users) {
             if (user.getAge() > 18) {
                 namesOldWay.add(user.getName());
             }
         }
-
         Collections.sort(namesOldWay);
-
         System.out.println("Old way:");
         System.out.println(namesOldWay);
 
@@ -40,11 +37,10 @@ public class Demo {
                 .filter(user -> user.getAge() > 18)            // Intermediate: lọc user > 18 tuổi
                 .map(User::getName)                            // Intermediate: chuyển User -> String name
                 .sorted()                                      // Intermediate: sắp xếp tên
+                .distinct()                                    // Intermediate: distinct
                 .collect(Collectors.toList());                 // Terminal: gom kết quả thành List
-
         System.out.println("\nStream way:");
         System.out.println(namesStream);
-
 
         // =====================================================
         // DEMO LAZY EVALUATION
