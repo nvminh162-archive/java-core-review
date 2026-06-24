@@ -1,4 +1,6 @@
 package com.nvminh162.b03_lambda_syntax;
 
-public class TwoParams {
+@FunctionalInterface
+public interface TwoParams {
+    int calculate(int a, int b);
 }

@@ -1,4 +1,6 @@
 package com.nvminh162.b03_lambda_syntax;
 
-public class NoParam {
+@FunctionalInterface
+public interface NoParam {
+    void run();
 }
