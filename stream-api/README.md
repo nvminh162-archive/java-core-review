@@ -1,3 +1,9 @@
+Đúng hướng. Dựa trên danh sách bạn gửi, mình sẽ chia thành **7 package đúng theo 7 bài Stream API**, mỗi bài có code demo + comment để bạn chạy và hiểu luồng xử lý.
+
+Mình dùng `Collectors.toList()` thay vì `.toList()` để tương thích tốt với **Java 8+**.
+
+---
+
 # Cấu trúc package
 
 ```text
