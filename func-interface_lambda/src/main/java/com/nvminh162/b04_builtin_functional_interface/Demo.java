@@ -50,7 +50,7 @@ public class Demo {
         // Nhận vào T, trả về T
         // Input và output cùng kiểu
         // =====================================================
-        UnaryOperator<String> upper = text -> text.toUpperCase();
+        UnaryOperator<String> upper = String::toUpperCase;
         System.out.println(upper.apply("java")); // JAVA
 
         // =====================================================
