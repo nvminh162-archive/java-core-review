@@ -24,7 +24,10 @@ public class Demo {
         // Vì Runnable là Functional Interface
         // nên có thể viết bằng lambda
         // =====================================================
-        Thread lambdaThread = new Thread(() -> { System.out.println("Lambda task running in: " + Thread.currentThread().getName()); });
+        Thread lambdaThread = new Thread(() -> {
+            System.out.println("Lambda task running in: " + Thread.currentThread().getName());
+            System.out.println("Lambda task finished");
+        });
         lambdaThread.setName("Lambda-Thread");
         lambdaThread.start();
     }
