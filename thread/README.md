@@ -668,3 +668,17 @@ synchronized
 ## Câu phỏng vấn tổng quát
 
 Thread là đơn vị thực thi nhỏ nhất trong một process. Một process có thể có nhiều thread chạy đồng thời và các thread trong cùng process dùng chung memory. Trong Java có thể tạo thread bằng cách extends `Thread` hoặc implements `Runnable`, trong đó `Runnable` thường được khuyên dùng hơn vì linh hoạt và tách biệt task với thread. Khi chạy thread phải gọi `start()` để tạo thread mới, còn gọi trực tiếp `run()` thì chỉ chạy như method bình thường trong thread hiện tại. Một số method quan trọng là `sleep()` để tạm dừng thread, `join()` để chờ thread khác kết thúc. Khi nhiều thread cùng sửa dữ liệu chung có thể gây race condition, lúc đó có thể dùng `synchronized` để đảm bảo thread-safe.
+
+```text
+NEW: tạo new Thread(...) nhưng chưa gọi start().
+
+RUNNABLE: đã gọi start(), thread đang sẵn sàng chạy hoặc đang chạy.
+
+TERMINATED: thread chạy xong, join() xong thì thấy trạng thái này.
+
+BLOCKED: thread muốn vào synchronized(lock) nhưng lock đang bị thread khác giữ.
+
+WAITING: thread gọi wait() và chờ vô thời hạn, phải có notify() đánh thức.
+
+TIMED_WAITING: thread gọi sleep(1000), tức là chờ có thời gian giới hạn.
+```
